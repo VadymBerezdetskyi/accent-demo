@@ -1,0 +1,34 @@
+---
+version: '3'
+services:
+  database:
+    image: postgres:11-alpine
+    env_file: .env
+    ports:
+      - "5432:5432"
+    networks:
+      - app_net
+
+  accent:
+    image: local/accent:latest
+    env_file: .env
+    ports:
+      - "4000:4000"
+    networks:
+      - app_net
+
+  website:
+    image: node:12
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./demo:/demo
+    working_dir: /demo
+    networks:
+      - app_net
+    command: ["yarn", "serve"]
+
+networks:
+  app_net:
+    driver: bridge

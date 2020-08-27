@@ -1,0 +1,12 @@
+{
+  "apiUrl": "http://localhost:4000",
+  "apiKey": "LnfRJ4Z4U4ks9XFOOrKcDwUSt6kQjWvCheH54WNEdwKQSas3ZNwiE9q3ZGNCQwJdSBuGmSfMtOxwBnMGOSZkh2TrgNdSRg",
+  "files": [
+    {
+      "language": "en",
+      "format": "json",
+      "source": "src/locales/en.json",
+      "target": "src/locales/%slug%.json"
+    }
+  ]
+}

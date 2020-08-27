@@ -1,0 +1,5 @@
+{
+  "key": "{^key@src/locales}",
+  "message": "{^message@src/locales}",
+  "test": "{^test@src/locales}"
+}
